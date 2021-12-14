@@ -1,18 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import HeroSection from './components/HeroSection';
+import Home from './components/pages/Home.js';
 
 function App() {
-  return (
+  return(
     <>
+
       <Router>
         <Navbar />
-        <Routes>
-          <Route path='/' exact />
+        <Switch>
+          <Route path='/' exact component={Home} />
 
-        </Routes>
+        </Switch>
       </Router>
+
     </>
   );
 }
