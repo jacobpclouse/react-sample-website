@@ -15,11 +15,9 @@ export const Button = ({
 }) => {
     const checkButtonStyle = STYLES.includes(buttonStyle) 
         ? buttonStyle 
-        : STYLE[0]
+        : STYLES[0];
 
-        const checkButtonSize = SIZES.includes(buttonSize)
-        ? buttonSize
-        : SIZES[0]
+        const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
 
         return(
@@ -34,3 +32,5 @@ export const Button = ({
             </Link>
         )
 }
+
+export default Button
